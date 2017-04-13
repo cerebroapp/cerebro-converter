@@ -8,8 +8,9 @@ module.exports.SYNONIMS = {
   'цельси*': '°c',
 
   'кельви*': 'k',
-  'keli*': 'k',
+  'kelvi*': 'k',
 
+  'fahrenheit*': '°f',
   'фаренгейт*': '°f',
   'f': '°f',
 }

@@ -7,11 +7,15 @@ module.exports.SYNONIMS = {
   'ounce': 'oz',
   'унци*': 'oz',
 
+  'kilogram*': 'kg',
   'килогра*': 'kg',
+  'gram': 'g',
   'грам*': 'g',
   'г': 'g',
+  'gr': 'g',
   'гр': 'g',
 
+  'milligram*': 'mg',
   'миллигр*': 'mg',
 
   'карат*': 'ct',
