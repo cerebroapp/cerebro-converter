@@ -23,7 +23,8 @@ module.exports.SYNONIMS = {
   'дюйм*': 'in',
 
   "'": 'ft',
-  'feet*': 'ft',
+  'foot': 'ft',
+  'feet': 'ft',
   'фут*': 'ft',
 
   'yard*': 'yard',

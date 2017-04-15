@@ -9,7 +9,7 @@ module.exports.SYNONIMS = {
 
   'kilogram*': 'kg',
   'килогра*': 'kg',
-  'gram': 'g',
+  'gram*': 'g',
   'грам*': 'g',
   'г': 'g',
   'gr': 'g',
