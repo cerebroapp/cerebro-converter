@@ -2,12 +2,15 @@
 
 module.exports.SYNONIMS = {
   'см': 'cm',
+  'centimeter*': 'cm',
   'сантиметр*': 'cm',
 
   'км': 'km',
+  'kilometer*': 'km',
   'километр*': 'km',
 
   'м': 'm',
+  'meter*': 'm',
   'метр*': 'm',
 
   'mile*': 'mile',
@@ -20,6 +23,8 @@ module.exports.SYNONIMS = {
   'дюйм*': 'in',
 
   "'": 'ft',
+  'foot': 'ft',
+  'feet': 'ft',
   'фут*': 'ft',
 
   'yard*': 'yard',
