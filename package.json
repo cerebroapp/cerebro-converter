@@ -21,7 +21,9 @@
   "main": "dist/index.js",
   "keywords": [
     "cerebro",
-    "cerebro-plugin"
+    "cerebro-extracted-plugin",
+    "converter",
+    "units"
   ],
   "devDependencies": {
     "babel-cli": "^6.24.1",
