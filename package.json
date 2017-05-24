@@ -1,9 +1,9 @@
 {
-  "name": "cerebro-plugin",
+  "name": "cerebro-converter",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cerebro plugin for converting units and currencies",
   "license": "MIT",
-  "repository": "KELiON/cerebro-plugin",
+  "repository": "KELiON/cerebro-converter",
   "author": {
     "name": "Alexandr Subbotin",
     "email": "kelionweb@gmail.com",
