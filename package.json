@@ -13,9 +13,9 @@
     "node": ">=4"
   },
   "scripts": {
-    "build": "webpack && babili dist -d dist --compact --no-comments",
-    "debug": "./scripts/debug",
-    "debug:windows": "scripts\\debug.bat",
+    "start": "cerebro-scripts start",
+    "build": "cerebro-scripts build",
+    "test": "cerebro-scripts test",
     "prepublish": "rimraf ./dist && npm run build"
   },
   "main": "dist/index.js",
@@ -26,17 +26,7 @@
     "units"
   ],
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babili": "0.0.12",
-    "cerebro-tools": "^0.1.8",
-    "css-loader": "^0.28.0",
-    "react": "^15.5.4",
-    "rimraf": "^2.6.1",
-    "style-loader": "^0.17.0",
-    "url-loader": "^0.5.8",
-    "webpack": "2.4.1"
+    "cerebro-scripts": "^0.0.11",
+    "rimraf": "^2.6.1"
   }
 }
