@@ -15,7 +15,7 @@ const CONVERTERS = [
 ]
 
 const numberRegexp = /[-+/*\d\s,\.\( )]+/
-const unitRegexp = /[\wa-я\$€£'"°℃]+/
+const unitRegexp = /[\wa-я\$€£₣₹฿₴₽₪'"°℃]+/
 
 const mainRegexpString = [
   // Start of line
