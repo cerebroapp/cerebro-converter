@@ -126,6 +126,7 @@ module.exports.SYNONIMS = {
   'ринггит*': 'myr',
 
   '฿': 'thb',
+  'baht': 'thb',
   'бат*': 'thb',
   'bat*': 'thb',
 
