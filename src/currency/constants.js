@@ -10,7 +10,7 @@ module.exports.CURRENCIES = [
   'huf', 'idr', 'ils', 'inr', 'jpy', 'krw',
   'mxn', 'myr', 'nok', 'nzd', 'php', 'pln',
   'ron', 'rub', 'sek', 'sgd', 'thb', 'try',
-  'uah', 'usd', 'zar', 'btc'
+  'uah', 'usd', 'zar', 'btc', 'clp'
 ]
 
 /**
@@ -33,6 +33,7 @@ module.exports.CURRENCY_BY_COUNTRY = {
   'US': 'usd',
   'CA': 'cad',
   'CH': 'chf',
+  'CL': 'clp',
   'CN': 'cny',
   'GB': 'gbp',
   'HK': 'hkd',
