@@ -1,6 +1,6 @@
 {
   "name": "cerebro-converter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Cerebro plugin for converting units and currencies",
   "license": "MIT",
   "repository": "KELiON/cerebro-converter",
@@ -26,7 +26,7 @@
     "units"
   ],
   "devDependencies": {
-    "cerebro-scripts": "^0.0.11",
+    "cerebro-scripts": "^0.0.24",
     "rimraf": "^2.6.1"
   }
 }

@@ -39,8 +39,5 @@ jspm_packages
 # Webstorm local folder
 .idea
 
-# Yarn dependecies lock file
-yarn.lock
-
 # Application local files
 dist
