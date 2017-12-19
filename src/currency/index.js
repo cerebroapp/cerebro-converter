@@ -45,12 +45,12 @@ function getRates(config) {
     .then(resp => resp.json())
     .then(response => {
       // Save exchange rates date
-      ratesDate = new Date(response.query.created)
+      ratesDate = new Date(response.date)
       // Save used base currency for cache check
       ratesCurrency = baseCurrency
-      // Convert response array with exchange rates to hash
-      response.query.results.rate.forEach(value => {
-        rates[value.Name.split('/')[1].toLowerCase()] = parseFloat(value.Rate)
+      rates[baseCurrency.toLowerCase()] = 1
+      Object.keys(response.rates).forEach(key => {
+        rates[key.toLowerCase()] = parseFloat(response.rates[key])
       })
     })
 }
