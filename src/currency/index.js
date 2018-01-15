@@ -9,28 +9,22 @@ const rates = {}
 // Date of fetching exchange rates
 let ratesDate = null
 
-// Currency that was used to fetch the cache
-let ratesCurrency = null
-
 let baseCurrency = null
 
 /**
- * Get yesterday's date
+ * Get cache expiration date
  * @return {Date}
  */
-function yesterday() {
-  return new Date(Date.now() - 24 * 3600 * 1000)
+function cacheExpirationDate() {
+  return new Date(Date.now() - 2 * 3600 * 1000)
 }
 
 /**
  * Check that saved exchange rates are still valid
- * @param {String} currency Check if cache was fetched for this base currency
  * @return {Boolean}
  */
-function cacheValid(currency) {
-  return ratesDate &&
-    currency === ratesCurrency &&
-    ratesDate >= yesterday()
+function cacheValid() {
+  return ratesDate && ratesDate >= cacheExpirationDate()
 }
 
 /**
@@ -39,18 +33,16 @@ function cacheValid(currency) {
  */
 function getRates(config) {
   baseCurrency = getBaseCurrency(config)
-  const url = getUrl(baseCurrency)
-  if (cacheValid(baseCurrency)) return Promise.resolve(rates)
+  const url = getUrl()
+  if (cacheValid()) return Promise.resolve(rates)
   return fetch(url)
     .then(resp => resp.json())
     .then(response => {
       // Save exchange rates date
-      ratesDate = new Date(response.date)
-      // Save used base currency for cache check
-      ratesCurrency = baseCurrency
-      rates[baseCurrency.toLowerCase()] = 1
-      Object.keys(response.rates).forEach(key => {
-        rates[key.toLowerCase()] = parseFloat(response.rates[key])
+      ratesDate = new Date() // mycurrency.net doesn't provide last refresh timestamp
+      // Convert response array with exchange rates to hash
+      response.forEach(value => {
+        rates[value.currency_code.toLowerCase()] = parseFloat(value.rate)
       })
     })
 }
