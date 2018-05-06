@@ -6,5 +6,5 @@ const { CURRENCIES } = require('./constants.js')
  * @return {String} url
  */
 module.exports = () => {
-  return "https://www.mycurrency.net/service/rates"
+  return "http://www.mycurrency.net/service/rates"
 }
