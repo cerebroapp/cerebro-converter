@@ -41,8 +41,8 @@ function getRates(config) {
       // Save exchange rates date
       ratesDate = new Date() // mycurrency.net doesn't provide last refresh timestamp
       // Convert response array with exchange rates to hash
-      response.forEach(value => {
-        rates[value.currency_code.toLowerCase()] = parseFloat(value.rate)
+      Object.keys(response.rates).forEach(key => {
+        rates[key.toLowerCase()] = parseFloat(response.rates[key])
       })
     })
 }
